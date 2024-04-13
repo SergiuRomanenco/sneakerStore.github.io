@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Kids</title>
+    <link rel="stylesheet" href="../global/styleHeader.css">
+    <link rel="stylesheet" href="../global/styleFooter.css">
+    <link rel="stylesheet" href="../ForKids/styleKids.css">
+    <link rel="stylesheet" href="../ForHim/styleHim.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+    <button onclick="topFunction()" class="btnNone" id="myBtn" title="Go to top"><i id="dreapta" class="fa-solid fa-angle-up"></i></button>
+
+    <!--Header
+    ==========================-->
+    <header 
+        style="position: absolute; background-color: rgba(246, 246, 246, 0.5); backdrop-filter: blur(5px); height: 90px; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);">
+        <div class="logoTip">
+            <div class="S">S</div>
+            <div onclick="logotip()">
+                <div class="neaker">neaker</div>
+                <div class="tore">tore</div>
+            </div>
+        </div>
+        <nav>
+            <div class="navigation">
+                <a class="link" href="../ForHim/indexHim.html">FOR HIM</a>
+                <a class="link" href="../ForHer/indexHer.html">FOR HER</a>
+                <a class="link" href="../ForKids/indexKids.html">FOR KIDS</a>
+                <a class="link" href="../Brands/indexBrands.html">BRANDS</a>
+            </div>
+        </nav>
+        <div class="socialNav">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-telegram"></i>
+        </div>
+    </header>
+
+
+    <main>
+        <!--Tot div-ul 'containerPrincipal' este creat pe pagina forHim iar toate stilurile sunt importate de acolo
+        Stilurile care se vor aplica pe aceasta pagina vor fi inline, sau vor fi create clase suplimentare-->
+        <div class="containerPrincipal" style="padding: 90px 0px 270px 0px;">
+            <div class="containerFilters">
+                <!--Filters container-->
+                <div class="filter-block">
+                    <div style="width: 100%; height: auto; border-bottom: 1px solid gray; padding-bottom: 6px;">
+                        <!--Filtru Brand-->
+                        <p class="FilterName">Brands</p>
+                        <div class="filter">
+                            <input type="checkbox" id="nike">
+                            <label for="nike">Nike</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" id="newBalance">
+                            <label for="newBalance">New Balance</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" id="adidas">
+                            <label for="adidas">Adidas</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" id="puma">
+                            <label for="puma">Puma</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" id="converse">
+                            <label for="converse">Converse</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" id="vans">
+                            <label for="vans">Vans</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" id="reebok">
+                            <label for="reebok">Reebok</label>
+                        </div>
+                    </div>
+
+                    <!--Filtru Pret-->
+                    <div style="width: 100%; border-bottom: 1px solid gray; padding-bottom: 30px;">
+                        <p class="FilterName">Preț</p>
+                        <div class="filterPret">
+                            <label for="minPrice">Min:</label>
+                            <input type="number" id="minPrice" min="0">
+                        </div>
+                        <div class="filterPret">
+                            <label for="maxPrice">Max:</label>
+                            <input type="number" id="maxPrice" min="0">
+                        </div>
+                    </div>
+
+                    <!--Filtru Culoare-->
+                    <div style="width: 100%;">
+                        <p class="FilterName">Culori</p>
+                        <div class="filter">
+                            <input type="color" id="black">
+                            <label for="black">Negru</label>
+                        </div>
+                        <div class="filter">
+                            <input type="color" id="green" value="#01B716">
+                            <label for="green">Verde</label>
+                        </div>
+                        <div class="filter">
+                            <input type="color" id="red" value="#ff0000">
+                            <label for="red">Roșu</label>
+                        </div>
+                    </div>
+
+                    <div style="margin: 5px 0px 20px 0px; width: 100%; display: flex; flex-direction: column; align-items: center;">
+                        <button id="filterPriceButton" class="buttonFiltru">Filtrează după preț</button>
+                        <button id="resetButton" class="buttonFiltru">Reseteaza filtrele</button>
+                        <!-- Butonul de filtrare -->
+                    </div> 
+                </div>
+            </div>
+            <div class="containerProducts">
+                <!--Search tab-->
+                <div class="search-bar">
+                    <p class="txtSearch">63 Lifestyle Sneakers</p>
+                    <div class="search-tab" style="box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);">
+                        <input type="text" id="searchInput" placeholder="Cauta...">
+                        <button id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                
+                <!--Products container-->
+                <div class="products-container" style="transition: height 0.5s ease;">
+                    <div class="product productKids" data-filters="nike">
+                        <img src="../Resources/knike1.jpg" alt="Nike" width="100%">
+                        <div class="nameProduct">
+                            <p class="name1">NIKE Pantofi Sport AIR JORDAN 1 MID BG</p>
+                            <p class="pret1">549,99 RON</p>
+                        </div>
+                    </div>
+                    <div class="product productKids" data-filters="nike" data-colors="white">
+                        <img src="../Resources/knike2.jpg" alt="Nike" width="100%">
+                        <div class="nameProduct">
+                            <p class="name1">NIKE Pantofi Sport AIR JORDAN LEGACY 312 LOW</p>
+                            <p class="pret1">529,99 RON</p>
+                        </div>
+                    </div>
+                    <div class="product productKids" data-filters="vans">
+                        <img src="../Resources/kvans1.jpg" alt="vans" width="100%">
+                        <div class="nameProduct">
+                            <p class="name1">VANS Pantofi Sport TD Old Skool V Navy</p>
+                            <p class="pret1">146,99 RON</p>
+                        </div>
+                    </div>
+                    <div class="product productKids" data-filters="nike">
+                        <img src="../Resources/knike3.jpg" alt="Nike" width="100%">
+                        <div class="nameProduct">
+                            <p class="name1">NIKE Pantofi Sport Jordan 1 Mid</p>
+                            <p class="pret1">579,99 RON</p>
+                        </div>
+                    </div>
+                    <div class="product productKids" data-filters="adidas">
+                        <img src="../Resources/kadidas1.jpg" alt="adidas" width="100%">
+                        <div class="nameProduct">
+                            <p class="name1">ADIDAS Pantofi Sport SUPERSTAR</p>
+                            <p class="pret1">399,99 RON</p>
+                        </div>
+                    </div>
+                    <div class="product productKids" data-filters="converse">
+                        <img src="../Resources/kconverse1.jpg" alt="converse" width="100%">
+                        <div class="nameProduct">
+                            <p class="name1">CONVERSE Pantofi Sport CHUCK TAYLOR ALL STAR</p>
+                            <p class="pret1">369,99 RON</p>
+                        </div>
+                    </div>
+                    <div class="product productKids" data-filters="adidas">
+                        <img src="../Resources/kadidas2.jpg" alt="adidas" width="100%">
+                        <div class="nameProduct">
+                            <p class="name1">ADIDAS Pantofi Sport Forum Mid</p>
+                            <p class="pret1">349,99 RON</p>
+                        </div>
+                    </div>
+                    <div class="product productKids" data-filters="vans">
+                        <img src="../Resources/kvans2.jpg" alt="vans" width="100%">
+                        <div class="nameProduct">
+                            <p class="name1">VANS Pantofi Sport JN Old Skool V</p>
+                            <p class="pret1">269,99 RON</p>
+                        </div>
+                    </div>
+                    <div class="product productKids" data-filters="converse">
+                        <img src="../Resources/kconverse2.jpg" alt="converse" width="100%">
+                        <div class="nameProduct">
+                            <p class="name1">CONVERSE Pantofi Sport CHUCK TAYLOR ALL STAR</p>
+                            <p class="pret1">346,99 RON</p>
+                        </div>
+                    </div>
+                    <div class="product productKids" data-filters="nike">
+                        <img src="../Resources/knike4.jpg" alt="nike" width="100%">
+                        <div class="nameProduct">
+                            <p class="name1">NIKE Pantofi Sport Air Max 270</p>
+                            <p class="pret1">323,99 RON</p>
+                        </div>
+                    </div>
+                    <div class="product productKids" data-filters="nike">
+                        <img src="../Resources/knike5.jpg" alt="nike" width="100%">
+                        <div class="nameProduct">
+                            <p class="name1">NIKE Pantofi Sport Air Max 270</p>
+                            <p class="pret1">469,99 RON</p>
+                        </div>
+                    </div>
+                    <div class="product productKids" data-filters="converse">
+                        <img src="../Resources/kconverse3.jpg" alt="converse" width="100%">
+                        <div class="nameProduct">
+                            <p class="name1">CONVERSE Pantofi Sport CHUCK TAYLOR AS CORE</p>
+                            <p class="pret1">229,99 RON</p>
+                        </div>
+                    </div>
+                    <div class="product productKids" data-filters="adidas">
+                        <img src="../Resources/kadidas3.jpg" alt="adidas" width="100%">
+                        <div class="nameProduct">
+                            <p class="name1">ADIDAS Pantofi Sport OZELIA J</p>
+                            <p class="pret1">311,99 RON</p>
+                        </div>
+                    </div>
+                    <div class="product productKids" data-filters="adidas">
+                        <img src="../Resources/kadidas4.jpg" alt="adidas" width="100%">
+                        <div class="nameProduct">
+                            <p class="name1">ADIDAS Pantofi Sport Country XLG Kids</p>
+                            <p class="pret1">349,99 RON</p>
+                        </div>
+                    </div>
+                    <div class="product productKids" data-filters="nike">
+                        <img src="../Resources/knike6.jpg" alt="nike" width="100%">
+                        <div class="nameProduct">
+                            <p class="name1">NIKE Pantofi Sport Air Max 97 Older Kids' Shoes</p>
+                            <p class="pret1">729,99 RON</p>
+                        </div>
+                    </div>
+                              
+                    
+                        <!--Extensie-->
+                    <div class="extensie" id="cardContainer" style="transition: all 0.5s ease;"> 
+                        <div class="product productKids" data-filters="reebok">
+                            <img src="../Resources/reebok4.jpg" alt="reebok" width="100%">
+                            <div class="nameProduct">
+                                <p class="name1">Reebok Pantofi Sport Classic Leather</p>
+                                <p class="pret1">449,99 RON</p>
+                            </div>
+                        </div>
+                        <div class="product productKids" data-filters="adidas">
+                            <img src="../Resources/adidasretro.jpg" alt="adidas" width="100%">
+                            <div class="nameProduct">
+                                <p class="name1">ADIDAS Pantofi Sport RETROPY E5 W.R.P.</p>
+                                <p class="pret1">510,99 RON</p>
+                            </div>
+                        </div>
+                        <div class="product productKids" data-filters="puma">
+                            <img src="../Resources/pumarsx.jpg" alt="puma" width="100%">
+                            <div class="nameProduct">
+                                <p class="name1">PUMA Pantofi Sport Puma RS-X Efekt Cordura</p>
+                                <p class="pret1">759,99 RON</p>
+                            </div>
+                        </div>  
+                        <div class="product productKids" data-filters="newBalance">
+                            <img src="../Resources/nb9060.jpg" alt="newBalance" width="100%">
+                            <div class="nameProduct">
+                                <p class="name1">NEW BALANCE Pantofi Sport NEW BALANCE - 9060</p>
+                                <p class="pret1">949,99 RON</p>
+                            </div>
+                        </div>
+                        <div class="product productKids" data-filters="reebok">
+                            <img src="../Resources/reebok3.jpg" alt="reebok" width="100%">
+                            <div class="nameProduct">
+                                <p class="name1">Reebok Pantofi Sport Pump Omni Zone</p>
+                                <p class="pret1">566,99 RON</p>
+                            </div>
+                        </div>
+                        <div class="product productKids" data-filters="converse">
+                            <img src="../Resources/converse1.jpg" alt="Converse" width="100%">
+                            <div class="nameProduct">
+                                <p class="name1">CONVERSE Pantofi Sport Chuck 70 GTX</p>
+                                <p class="pret1">639,99 RON</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                <div style="display: flex; justify-content: center; padding: 30px 0px 0px 0px;">
+                    <button class="more" id="toggleButton" style="box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); border: 1px solid gray;">Mai mult&nbsp;<i class="fa-solid fa-chevron-down"></i></button>
+                </div>
+                
+
+                <!-- Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="modalImg">
+                </div>
+            
+            </div>
+        </div>
+
+    </main>
+
+
+    <!--Footer
+    ============================-->
+    <footer style="background-color: rgba(215, 215, 215, 0.5); backdrop-filter: blur(7px); position: absolute; bottom: 0; box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.3);">
+        <div class="logoTip">
+            <div class="S">S</div>
+            <div>
+                <div class="neaker">neaker</div>
+                <div class="tore">tore</div>
+            </div>
+        </div>
+        <div class="navigation">
+            <a class="link" href="#">HOME</a>
+            <a class="link" href="#services">FOR HIM</a>
+            <a class="link" href="#projects">FOR HER</a>
+            <a class="link" href="#blog">FOR KIDS</a>
+            <a class="link" href="#contact">BRANDS</a>
+        </div>
+        <form class="form_social_media">
+            <input class="social_media" type="image" src="../Resources/Facebook.png" onclick="facebook()" alt="Facebook" style="border-radius: 7px;">
+            <input class="social_media" type="image" src="../Resources/Instagram.jpg" onclick="instagram()" alt="Instagram">
+            <input class="social_media" type="image" src="../Resources/WhatsApp.png" onclick="whatsapp()" alt="WhatsApp">
+            <input class="social_media" type="image" src="../Resources/Telegram.png" onclick="telegram()" alt="Telegram" style="border-radius: 7px;">
+        </form>
+        <div class="div-copyright">
+            <p class="copyright-responsive">&copy; Copyright 2023. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <script src="../global/scriptHeader.js"></script>
+    <script src="../ForKids/scriptKids.js"></script>
+    <script src="../ForHim/scriptHim.js"></script>
+</body>
+</html>
